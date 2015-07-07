@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="indoorSite">
    <head>
       <meta charset="utf-8">
       <title>IndoorPi WebSite</title>
@@ -28,105 +28,33 @@
                <li><a href="#/blog">Blog</a></li>
             </ul>
           </div>
-        </nav>
+       </nav>
       </div>
 
-     <section id="accueil" class="accueil valign-wrapper">
-        <div class="container valign">
-           <div class="row ">
-              <div class="col s12 ">
-                <h2 class="center-align">Indoorpi</h2>
-                <p class="flow-text center-align">
-                   A monitoring and interfacing system for your indoor cultures.
-                </p>
-              </div>
-           </div>
-        </div>
-     </section>
+      <div ng-view></div>
 
-     <section id="projet" class="projet">
-        <div class="container">
-           <div class="row">
-              <div class="col s12">
-                 <h1 class="center-align">Projet</h1>
-                 <p class="flow-text center-align">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sagittis magna id ullamcorper dignissim. Ut convallis ornare justo a scelerisque. In nisi quam, interdum eget accumsan non, placerat sit amet enim. Duis a facilisis lacus, in mollis velit. Nulla scelerisque, felis nec tristique consequat, dui velit ullamcorper libero, in tempor orci odio et elit. Pellentesque porta dolor non ex lobortis ornare. Phasellus ac interdum sapien. Sed vulputate augue erat. Vivamus fermentum nunc suscipit, tempus augue quis, volutpat massa. Suspendisse blandit rutrum iaculis. Mauris ut consectetur turpis. Praesent nec nunc elementum nunc congue egestas. In fringilla suscipit mauris, a rhoncus neque semper et. Morbi sed erat nulla.
-
-         Maecenas dictum, velit vel commodo elementum, metus nisl sollicitudin eros, id tempor massa neque et velit. Ut dignissim neque lacus, vel volutpat libero mattis malesuada. Vestibulum risus ligula, hendrerit quis pulvinar vel, scelerisque eget leo. Suspendisse porta diam non mollis faucibus. Pellentesque varius felis sapien, id eleifend neque accumsan in. Vestibulum ultricies arcu eget sapien luctus efficitur. Donec diam diam, cursus et ex id, volutpat efficitur urna. Nullam in eros ut sapien pulvinar sagittis. Nam maximus nisl vel mi sodales, a malesuada ipsum pharetra.
-
-         Mauris rhoncus ut tortor consequat sagittis. Praesent porta urna risus, quis fringilla ligula viverra vel. Nullam et mattis metus. Vestibulum egestas enim in enim lacinia malesuada. Suspendisse in turpis sapien. Curabitur luctus gravida nunc, eu porta nisi. Nulla posuere at dolor a porttitor. Nullam sed nulla quam. Suspendisse quam nulla, tempus id neque a, interdum molestie justo. Curabitur mattis fermentum pellentesque. In varius mauris et diam efficitur mollis a ut quam.
-                 </p>
-              </div>
-           </div>
-        </div>
-
-     </section>
-
-
-     <section class="picture-separator valign-wrapper">
-        <div class="content container valign">
+      <section class="footer blue-grey lighten-4">
+       <div class="container">
           <div class="row">
-             <div class="col s12">
-                <h1 class="center-align  ">Best Qualidad you'll never had</h1>
-             </div>
-          </div>
-        </div>
-        <img src="assets/img/d.jpg" class="responsive-img" alt="" />
-
-     </section>
-
-     <section id="tmp" class="tmp">
-        <div class="container">
-           <div class="row">
-              <div class="col s12">
-                 <h1 class="center-align">Bla Bla</h1>
-                 <p class="flow-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sagittis magna id ullamcorper dignissim. Ut convallis ornare justo a scelerisque. In nisi quam, interdum eget accumsan non, placerat sit amet enim. Duis a facilisis lacus, in mollis velit. Nulla scelerisque, felis nec tristique consequat, dui velit ullamcorper libero, in tempor orci odio et elit. Pellentesque porta dolor non ex lobortis ornare. Phasellus ac interdum sapien. Sed vulputate augue erat. Vivamus fermentum nunc suscipit, tempus augue quis, volutpat massa. Suspendisse blandit rutrum iaculis. Mauris ut consectetur turpis. Praesent nec nunc elementum nunc congue egestas. In fringilla suscipit mauris, a rhoncus neque semper et. Morbi sed erat nulla.
-
-         Maecenas dictum, velit vel commodo elementum, metus nisl sollicitudin eros, id tempor massa neque et velit. Ut dignissim neque lacus, vel volutpat libero mattis malesuada. Vestibulum risus ligula, hendrerit quis pulvinar vel, scelerisque eget leo. Suspendisse porta diam non mollis faucibus. Pellentesque varius felis sapien, id eleifend neque accumsan in. Vestibulum ultricies arcu eget sapien luctus efficitur. Donec diam diam, cursus et ex id, volutpat efficitur urna. Nullam in eros ut sapien pulvinar sagittis. Nam maximus nisl vel mi sodales, a malesuada ipsum pharetra.
-
-         Mauris rhoncus ut tortor consequat sagittis. Praesent porta urna risus, quis fringilla ligula viverra vel. Nullam et mattis metus. Vestibulum egestas enim in enim lacinia malesuada. Suspendisse in turpis sapien. Curabitur luctus gravida nunc, eu porta nisi. Nulla posuere at dolor a porttitor. Nullam sed nulla quam. Suspendisse quam nulla, tempus id neque a, interdum molestie justo. Curabitur mattis fermentum pellentesque. In varius mauris et diam efficitur mollis a ut quam.
-                 </p>
-              </div>
-           </div>
-        </div>
-     </section>
-
-     <section id="contact" class="contact">
-        <div class="container">
-           <div class="row">
-             <h2 class="center-align">Contact</h2>
-             <h5 class="center-align">Vous voulez être tenu au courant de l'avancement du projet  et peut-être être l'un des premiers heureux d'étendre du IndoorPi ?</h5>
-             <form class="col s12" style="margin-top: 50px;">
-               <div class="row">
-                 <div class="input-field col s12">
-                   <input id="email" type="email" class="validate">
-                   <label for="email" data-error="wrong" data-success="right">Email</label>
-                 </div>
-                 <div class="col s12 center-align">
-                    <button class=" btn waves-effect waves-light" type="submit" name="action">envoyer</button>
-                 </div>
-               </div>
-             </form>
-           </div>
-        </div>
-     </section>
-
-     <section class="footer blue-grey lighten-4">
-        <div class="container">
-           <div class="row">
               <div class="col s12">
                  <h2>Footer</h2>
                  <p class="flow-text">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                  </p>
               </div>
-           </div>
-        </div>
+          </div>
+       </div>
      </section>
 
       <script src="js/vendor/jquery/dist/jquery.js" charset="utf-8"></script>
+      <script src="js/vendor/angular/angular.js" charset="utf-8"></script>
+      <script src="js/vendor/angular-route/angular-route.js" charset="utf-8"></script>
       <script src="js/vendor/materialize/dist/js/materialize.js" charset="utf-8"></script>
+      <!-- Angular -->
+      <script src="js/app.js" charset="utf-8"></script>
+
+      <script src="js/controllers/mainController.js" charset="utf-8"></script>
+      <script src="js/controllers/blogController.js" charset="utf-8"></script>
       <script type="text/javascript">
          $(document).ready(function(){
                $('.button-collapse').sideNav();
