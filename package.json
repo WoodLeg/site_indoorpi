@@ -1,0 +1,30 @@
+{
+  "name": "IndoorPi",
+  "version": "1.0.0",
+  "description": "Site du projet IndoorPi",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/WoodLeg/site_indoorpi.git"
+  },
+  "keywords": [
+    "site",
+    "indoorpi",
+    "culture",
+    "indoor"
+  ],
+  "author": "Paul Souvestre",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/WoodLeg/site_indoorpi/issues"
+  },
+  "dependencies": {
+    "express": "~4.13.1"
+  },
+  "devDependencies": {
+    "morgan": "~1.6.1"
+  }
+}
