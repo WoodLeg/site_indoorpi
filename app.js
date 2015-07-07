@@ -3,14 +3,15 @@ var app = express();
 var morgan = require('morgan');
 
 
+app.use(express.static('public'));
 app.use(morgan('dev'));
 
 
+
+
 app.get('/', function(request, response){
-      response.send('ok');
+      response.sendFile('index.html');
 });
-
-
 
 
 
