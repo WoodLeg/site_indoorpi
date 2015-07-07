@@ -1,0 +1,30 @@
+{
+  "name": "indoorpi",
+  "version": "1.0.0",
+  "homepage": "https://github.com/WoodLeg/site_indoorpi",
+  "authors": [
+    "Paul Souvestre <paul.souvestre@gmail.com>"
+  ],
+  "description": "Site pour le projet IndoorPi",
+  "main": "app.js",
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "site",
+    "indoorPi",
+    "culture",
+    "indoor"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "materialize": "~0.97.0"
+  }
+}
