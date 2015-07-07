@@ -19,13 +19,16 @@ angular.module('indoorSite')
 
       $scope.mail = "Email";
       $scope.submit = function(data){
-         $scope.user.mail = null;
          $http({method: 'POST', url:'/mail', data: {usermail: data.mail}})
                .success(function(data, status){
+                  $scope.user.mail = null;
+                  Materialize.toast('Mail envoyé !', 4000);
                   console.log(data);
                }).error(function(data, status){
                   console.log(data);
                });
+
+
       }
 
 

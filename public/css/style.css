@@ -98,9 +98,11 @@
   transition: all .3s;
 }
 
-
-
 .footer{
    width:100%;
-   height: 300px;
+   min-hheight: 300px;
+}
+
+.footer .row {
+   margin:0;
 }

@@ -22,7 +22,12 @@
     "url": "https://github.com/WoodLeg/site_indoorpi/issues"
   },
   "dependencies": {
-    "express": "~4.13.1"
+    "express": "~4.13.1",
+    "body-parser": "~1.13.2",
+    "nodemailer": "~1.4.0",
+    "nodemailer-sendmail-transport": "~1.0.0",
+    "nodemailer-smtp-transport": "~1.0.3",
+    "xoauth2": "~1.0.0"
   },
   "devDependencies": {
     "morgan": "~1.6.1"
