@@ -1,0 +1,25 @@
+<div class="bg_post">
+   <img ng-src="{{post.img}}" alt="" />
+</div>
+
+
+
+<div class="container post z-depth-1">
+   <div class="row">
+        <div class="col s12 m12 l12">
+           <header>
+               <i ng-click="blogLink()" class="left material-icons">play_arrow</i>
+               <h2 class="left">{{post.title}}</h2><h5 class="right">{{post.date}}</h5>
+           </header>
+           <div class="content container">
+             <div class="row">
+                <div class="col s12 m12 l12">
+                   <p class="flow-text">
+                      {{ post.content }}
+                   </p>
+                </div>
+             </div>
+           </div>
+        </div>
+   </div>
+</div>

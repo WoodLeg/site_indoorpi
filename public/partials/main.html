@@ -1,10 +1,36 @@
+<div class="navbar-fixed">
+   <nav>
+    <div class="nav-wrapper  nav-color">
+      <a href="#!" style="margin-left: 20px" class="brand-logo">Lorem</a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a class="scrollTo" href="#accueil">Lorem</a></li>
+        <li><a class="scrollTo" href="#projet">Lorem</a></li>
+        <li><a class="scrollTo" href="#tmp">Lorem</a></li>
+        <li><a class="scrollTo" href="#contact">Lorem</a></li>
+        <li><a href="#/blog">Blog</a></li>
+      </ul>
+      <ul class="side-nav" id="mobile-demo">
+         <li><a class="scrollTo" href="#accueil">Lorem</a></li>
+         <li><a class="scrollTo" href="#projet">Lorem</a></li>
+         <li><a class="scrollTo" href="#tmp">Lorem</a></li>
+         <li><a class="scrollTo" href="#contact">Lorem</a></li>
+         <li><a href="#/blog">Blog</a></li>
+      </ul>
+    </div>
+ </nav>
+</div>
+
+
+
+
 <section id="accueil" class="accueil valign-wrapper">
   <div class="container valign">
      <div class="row ">
         <div class="col s12 ">
-          <h2 class="center-align">Indoorpi</h2>
+          <h2 class="center-align">Lorem</h2>
           <p class="flow-text center-align">
-             A monitoring and interfacing system for your indoor cultures.
+             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sagittis
           </p>
         </div>
      </div>
@@ -15,7 +41,7 @@
   <div class="container">
      <div class="row">
         <div class="col s12">
-           <h1 class="center-align">Projet</h1>
+           <h1 class="center-align">Lorem</h1>
            <p class="flow-text center-align">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sagittis magna id ullamcorper dignissim. Ut convallis ornare justo a scelerisque. In nisi quam, interdum eget accumsan non, placerat sit amet enim. Duis a facilisis lacus, in mollis velit. Nulla scelerisque, felis nec tristique consequat, dui velit ullamcorper libero, in tempor orci odio et elit. Pellentesque porta dolor non ex lobortis ornare. Phasellus ac interdum sapien. Sed vulputate augue erat. Vivamus fermentum nunc suscipit, tempus augue quis, volutpat massa. Suspendisse blandit rutrum iaculis. Mauris ut consectetur turpis. Praesent nec nunc elementum nunc congue egestas. In fringilla suscipit mauris, a rhoncus neque semper et. Morbi sed erat nulla.
 
@@ -62,7 +88,6 @@
   <div class="container">
      <div class="row">
        <h2 class="center-align">Contact</h2>
-       <h5 class="center-align">Vous voulez être tenu au courant de l'avancement du projet  et peut-être être l'un des premiers heureux d'étendre du IndoorPi ?</h5>
        <form class="col s12" style="margin-top: 50px;">
          <div class="row">
            <div class="input-field col s12">
@@ -77,3 +102,17 @@
      </div>
   </div>
 </section>
+
+<script type="text/javascript">
+   $(document).ready(function(){
+         $('.button-collapse').sideNav();
+         $('.parallax').parallax();
+         $('.scrollTo').click( function() { // Au clic sur un élément
+            var page = $(this).attr('href'); // Page cible
+            $('.button-collapse').sideNav('hide');
+            var speed = 1000; // Durée de l'animation (en ms)
+            $('html, body').animate( { scrollTop: $(page).offset().top }, speed ); // Go
+            return false;
+         });
+   });
+</script>
