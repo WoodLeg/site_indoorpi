@@ -27,7 +27,12 @@
     "nodemailer": "~1.4.0",
     "nodemailer-sendmail-transport": "~1.0.0",
     "nodemailer-smtp-transport": "~1.0.3",
-    "xoauth2": "~1.0.0"
+    "xoauth2": "~1.0.0",
+    "mongoose": "~4.0.6",
+    "multer": "~0.1.8",
+    "path": "~0.11.14",
+    "fs": "0.0.2",
+    "jsonwebtoken": "~5.0.2"
   },
   "devDependencies": {
     "morgan": "~1.6.1"

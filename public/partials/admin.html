@@ -1,0 +1,39 @@
+   <div class="row">
+      <div class="col s12">
+         <div class="row">
+            <div class="col s12">
+               <h1 class="left">{{title}}</h1>
+               <a href="#/admin/new" style="margin-top: 50px; margin-left: 35px;" class="waves-effect waves-light btn">New Post</a>
+               <a ng-click="logOut()" style="margin-top: 50px; margin-left: 35px;" class="right waves-effect waves-light btn">Log out</a>
+            </div>
+         </div>
+
+         <table class="responsive-table centered">
+           <thead>
+             <tr>
+                 <th data-field="blog">Title</th>
+                 <th data-field="content">Content</th>
+                 <th data-field="display">Display</th>
+                 <th data-field="img">Img</th>
+                 <th data-field="date">date</th>
+                 <th data-field="action">Action</th>
+             </tr>
+           </thead>
+
+           <tbody>
+             <tr ng-repeat="post in posts">
+               <td>{{post.title}}</td>
+               <td>{{post.content | words: 10}}</td>
+               <td>{{post.display}}</td>
+               <td>{{post.img}}</td>
+               <td>{{post.date}}</td>
+               <td>
+                  <a ng-click="edit(post._id)" class="waves-effect waves-light btn">Edite</a>
+                  <a ng-click="delete(post._id)" class="waves-effect waves-light btn">Delete</a>
+               </td>
+             </tr>
+           </tbody>
+         </table>
+
+      </div>
+   </div>

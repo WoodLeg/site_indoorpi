@@ -27,6 +27,10 @@
   "dependencies": {
     "materialize": "~0.97.0",
     "angular": "~1.4.2",
-    "angular-route": "~1.4.2"
+    "angular-route": "~1.4.2",
+    "angular-truncate-2": "~0.2.0",
+    "angular-file-model": "~0.3.0",
+    "angular-file-upload": "~1.1.5",
+    "ngstorage": "~0.3.7"
   }
 }

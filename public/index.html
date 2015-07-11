@@ -11,25 +11,28 @@
 
       <div ng-view></div>
 
-      <section class="footer blue-grey lighten-4">
-       <div class="container">
-          <div class="row">
-              <div class="col s12">
-                 <h2>Footer</h2>
-              </div>
-          </div>
-       </div>
-     </section>
-
       <script src="js/vendor/jquery/dist/jquery.js" charset="utf-8"></script>
       <script src="js/vendor/angular/angular.js" charset="utf-8"></script>
       <script src="js/vendor/angular-route/angular-route.js" charset="utf-8"></script>
+      <script src="js/vendor/angular-truncate-2/src/truncate.js"></script>
+      <script src="js/vendor/angular-file-model/angular-file-model.js" charset="utf-8"></script>
+      <script src="js/vendor/es5-shim/es5-shim.js" charset="utf-8"></script>
+      <script src="js/vendor/angular-file-upload/angular-file-upload.js" charset="utf-8"></script>
+      <script src="js/vendor/ngstorage/ngStorage.js" charset="utf-8"></script>
       <script src="js/vendor/materialize/dist/js/materialize.js" charset="utf-8"></script>
       <!-- Angular -->
       <script src="js/app.js" charset="utf-8"></script>
 
+      <!-- Controllers -->
       <script src="js/controllers/mainController.js" charset="utf-8"></script>
       <script src="js/controllers/blogController.js" charset="utf-8"></script>
       <script src="js/controllers/postController.js" charset="utf-8"></script>
+      <script src="js/controllers/adminController.js" charset="utf-8"></script>
+      <script src="js/controllers/newPostController.js" charset="utf-8"></script>
+      <script src="js/controllers/editPostController.js" charset="utf-8"></script>
+      <script src="js/controllers/loginController.js" charset="utf-8"></script>
+
+      <!-- Services -->
+      <script src="js/services/userService.js" charset="utf-8"></script>
    </body>
 </html>

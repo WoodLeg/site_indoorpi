@@ -1,0 +1,69 @@
+
+   <div class="container">
+      <div class="row">
+         <div class="col s12">
+            <h1>{{ pageTitle }}</h1>
+            <div class="row">
+               <form class="col s12">
+
+                  <div class="row">
+                     <div class="input-field col s6">
+                      <input ng-model="post.title" placeholder="{{post.title}}" id="blog_title" type="text" class="validate">
+                      <label for="blog_title">Blog Title</label>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                     <div class="input-field col s6">
+                        <select ng-model="post.display">
+                           <option value="" selected>{{post.display}}</option>
+                           <option value="m4 l4">m4 l4</option>
+                           <option value="m6 l6">m6 l6</option>
+                           <option value="m8 l8">m8 l8</option>
+                           <option value="m12 l12">m12 l12</option>
+                        </select>
+                        <label>Display on Blog Page</label>
+                     </div>
+                     <div class="input-field col s6">
+                        <input ng-model="post.date" type="date" class="datepicker">
+                     </div>
+                  </div>
+
+                  <div class="row">
+                     <div class="file-field input-field col s12">
+                        <input  ng-model="post.img" class="file-path validate" type="text"/>
+                        <div class="btn">
+                           <span>File</span>
+                           <input nv-file-select uploader="uploader" type="file" />
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="row">
+                     <div class="input-field col s12">
+                        <i class="material-icons prefix">mode_edit</i>
+                        <textarea ng-model="post.content" id="icon_prefix2" class="materialize-textarea"></textarea>
+                     </div>
+                  </div>
+                  <button class="btn waves-effect waves-light" ng-click="upload(post)" name="action">Send</button>
+               </form>
+            </div>
+         </div>
+      </div>
+   </div>
+
+
+<script type="text/javascript">
+   $(document).ready(function() {
+      $('select').material_select();
+      $('.datepicker').pickadate({
+         selectMonths: true, // Creates a dropdown to control month
+         selectYears: 15 // Creates a dropdown of 15 years to control year
+      });
+      function reload_js(src) {
+          $('script[src="' + src + '"]').remove();
+          $('<script>').attr('src', src).appendTo('head');
+      }
+      reload_js('js/vendor/materialize/dist/js/materialize.js');
+   });
+</script>
