@@ -2,8 +2,8 @@ angular.module('indoorSite')
 
 
 
-.controller('newPostController', ['$scope', '$http','FileUploader','$location',
-   function($scope, $http, FileUploader, $location){
+.controller('newPostController', ['$scope', '$http','FileUploader','$location', '$localStorage',
+   function($scope, $http, FileUploader, $location, $localStorage){
          $scope.pageTitle = "New Post";
 
          var uploader = $scope.uploader = new FileUploader({
@@ -16,6 +16,7 @@ angular.module('indoorSite')
 
         uploader.onBeforeUploadItem = function(item) {
             item.formData.push($scope.newPost);
+            item.headers.authorization = 'Bearer ' + $localStorage.token;
             console.info('onBeforeUploadItem', item);
         };
         uploader.onProgressItem = function(fileItem, progress) {

@@ -8,6 +8,7 @@ angular.module('indoorSite', ['ngRoute','truncate','angularFileUpload', 'ngStora
                return {
                   'request': function (config) {
                      config.headers = config.headers || {};
+                     console.info("Config: ", config);
                      if ($localStorage.token){
                         config.headers.Authorization = 'Bearer ' + $localStorage.token;
                      }

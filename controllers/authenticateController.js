@@ -23,6 +23,7 @@ soloUser();
 module.exports.ensureAuth = function(request, response, next){
    var bearerToken;
    var bearerHeader = request.headers['authorization'];
+   console.log(bearerHeader);
    if (typeof bearerHeader !== undefined){
       var bearer = bearerHeader.split(" ");
       var bearerToken = bearer[1];
