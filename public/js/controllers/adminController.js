@@ -20,7 +20,6 @@ angular.module('indoorSite')
                .success(function(data, status){
                   for (var i = 0; i < $scope.posts.length; i++) {
                      if ($scope.posts[i]['_id'] == postID) {
-                        console.log('YEAH');
                         $scope.posts.splice(i, 1);
                      }
                   }
