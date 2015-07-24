@@ -2,8 +2,13 @@ angular.module('indoorSite')
 
 .directive('progress', function(){
    return {
+      scope: {
+         progress : '@'
+      },
       link: function(scope, elem, attrs){
-         attrs.style = 'width: ' + scope.progress + '%';
+         attrs.$observe('progress', function(){
+            elem.css('width', attrs.progress + '%');
+         })
       }
    }
 })
