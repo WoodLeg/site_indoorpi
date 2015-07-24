@@ -1,10 +1,17 @@
 angular.module('indoorSite')
 
-
+.directive('progress', function(){
+   return {
+      link: function(scope, elem, attrs){
+         attrs.style = 'width: ' + scope.progress + '%';
+      }
+   }
+})
 
 .controller('newPostController', ['$scope', '$http','FileUploader','$location', '$localStorage',
    function($scope, $http, FileUploader, $location, $localStorage){
          $scope.pageTitle = "New Post";
+         $scope.progress = 0;
 
          var uploader = $scope.uploader = new FileUploader({
             url: '/blog'
@@ -21,7 +28,7 @@ angular.module('indoorSite')
         };
         uploader.onProgressItem = function(fileItem, progress) {
             console.info('onProgressItem', fileItem, progress);
-            $scope.styleProgress= 'width: ' + progress +'%';
+            $scope.progress = progress;
         };
         uploader.onSuccessItem = function(fileItem, response, status, headers) {
             console.info('onSuccessItem', fileItem, response, status, headers);
