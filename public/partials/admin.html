@@ -19,7 +19,6 @@
                  <th data-field="action">Action</th>
              </tr>
            </thead>
-
            <tbody>
              <tr ng-repeat="post in posts">
                <td>{{post.title}}</td>
@@ -30,6 +29,36 @@
                <td>
                   <a ng-click="edit(post._id)" class="waves-effect waves-light btn">Edite</a>
                   <a ng-click="delete(post._id)" class="waves-effect waves-light btn">Delete</a>
+               </td>
+             </tr>
+           </tbody>
+         </table>
+
+      </div>
+   </div>
+
+   <div class="row">
+      <div class="col s12">
+         <div class="row">
+            <div class="col s12">
+               <h3 class="left">{{customerTitle}} - {{totalCus}}</h3>
+            </div>
+         </div>
+
+         <table class="responsive-table">
+           <thead>
+             <tr>
+                 <th data-field="blog">Id</th>
+                 <th data-field="content">Mail</th>
+                 <th data-field="action">Action</th>
+             </tr>
+           </thead>
+           <tbody>
+             <tr ng-repeat="customer in customers">
+               <td>{{customer._id}}</td>
+               <td>{{customer.email}}</td>
+               <td>
+                  <a ng-click="deleteCus(customer._id)" class="waves-effect waves-light btn">Delete</a>
                </td>
              </tr>
            </tbody>

@@ -4,7 +4,6 @@ var morgan = require('morgan');
 var mongoose = require('mongoose');
 
 
-
 // Connection to the database
 mongoose.connect('mongodb://localhost/indoorpi');
 mongoose.connection.once('open', function(err){
@@ -18,16 +17,17 @@ var mainRoute = require('./routes/mainRoute');
 var mailRoute = require('./routes/mailRoute');
 var blogRoute = require('./routes/blogRoute');
 var authenticateRoute = require('./routes/authenticateRoute');
-
+var customerRoute = require('./routes/customerRoute');
 // Middlewares
 app.use(express.static('public')); // Config the static folder for rendering
 app.use(morgan('dev')); // Log debugging
 
 // Routing
+app.use('/authenticate', authenticateRoute);
 app.use('/', mainRoute);
 app.use('/mail', mailRoute);
 app.use('/blog', blogRoute);
-app.use('/authenticate', authenticateRoute);
+app.use('/customers', customerRoute);
 
 
 process.on('uncaughtException', function(err){

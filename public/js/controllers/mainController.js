@@ -1,6 +1,5 @@
 angular.module('indoorSite')
 
-
 .directive('mark', function(){
    return {
       link: function (scope, elem, attrs){
@@ -17,8 +16,10 @@ angular.module('indoorSite')
 .controller('mainController', ['$scope', '$http',
    function($scope, $http){
 
+      console.info($scope.userForm);
       $scope.mail = "Email";
       $scope.submit = function(data){
+         /** Mail request
          $http({method: 'POST', url:'/mail', data: {usermail: data.mail}})
                .success(function(data, status){
                   $scope.user.mail = null;
@@ -27,6 +28,16 @@ angular.module('indoorSite')
                }).error(function(data, status){
                   console.log(data);
                });
+         **/
+
+         // Send a request to add the mail's customer to the database
+         $http({method: 'POST', url: '/customers', data: {usermail: data.mail}})
+            .success(function(data, status){
+               $scope.user.mail = null;
+               console.info('Added customer success', data);
+            }).error(function(data, status){
+               console.log(data);
+            })
 
 
       }

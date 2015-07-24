@@ -88,15 +88,17 @@
   <div class="container">
      <div class="row">
        <h2 class="center-align">Contact</h2>
-       <form class="col s12" style="margin-top: 50px;">
+       <form name="userForm" class="col s12" style="margin-top: 50px;">
          <div class="row">
-           <div class="input-field col s12">
-             <input mark id="email" ng-model="user.mail" class="validate mail">
-             <label for="email" data-error="wrong"  data-success="right">{{mail}}</label>
-           </div>
-           <div class="col s12 center-align">
+            <div class="input-field col s12">
+            <input ng-model="user.mail" id="email" type="email" class="validate">
+            <label for="email">Email</label>
+            </div>
+         </div>
+         <div class="row">
+            <div class="col s12 center-align">
               <button class="btn waves-effect waves-light" ng-click="submit(user)">envoyer</button>
-           </div>
+            </div>
          </div>
        </form>
      </div>
