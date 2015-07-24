@@ -21,6 +21,7 @@ angular.module('indoorSite')
         };
         uploader.onProgressItem = function(fileItem, progress) {
             console.info('onProgressItem', fileItem, progress);
+            $scope.styleProgress= 'width: ' + progress +'%';
         };
         uploader.onSuccessItem = function(fileItem, response, status, headers) {
             console.info('onSuccessItem', fileItem, response, status, headers);
